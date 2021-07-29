@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.matejdro.androidtvrefresher">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AndroidTvRefresher">
+
+        <service
+            android:name=".ListenerService"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".ConfigReceiver">
+            <intent-filter>
+                <action android:name="com.matejdro.androidtvrefresher.SET_URL" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.matejdro.androidtvrefresher.SET_TOKEN" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
