@@ -4,7 +4,7 @@ When app is active, it turns Android TV integration [from Local Polling to Local
 
 # Installation & Configuration
 
-1. Download [latest release apk](releases/latest)
+1. Download [latest release apk](https://github.com/matejdro/AndroidTVRefresher/releases/latest)
 2. Install apk to the Android TV (you can use any method your like - [here is one](https://www.androidpolice.com/2021/02/23/how-to-sideload-any-application-on-android-tv/))
 3. Open Home Assistant
 4. Open your profile
