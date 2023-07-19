@@ -21,7 +21,7 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.create
 
 class ListenerService : NotificationListenerService(), LifecycleOwner {
-    private val lifecycle = LifecycleRegistry(this)
+    override val lifecycle = LifecycleRegistry(this)
 
     private var previousController: MediaController? = null
     private var previousState: Int = PlaybackState.STATE_STOPPED
@@ -107,10 +107,6 @@ class ListenerService : NotificationListenerService(), LifecycleOwner {
 
         lifecycle.currentState = Lifecycle.State.DESTROYED
         unregisterReceiver(refreshBroadcastReceiver)
-    }
-
-    override fun getLifecycle(): Lifecycle {
-        return lifecycle
     }
 
     private fun getOrCreateApi(): HomeAssistantApi? {
