@@ -71,8 +71,8 @@ class ListenerService : NotificationListenerService(), LifecycleOwner {
         Log.d("AndroidTvRefresher", "Refresh")
 
         try {
-            val api = getOrCreateApi() ?: return@executeDebouncing
-            val token = config.token ?: return@executeDebouncing
+            val api = getOrCreateApi() ?: throw IllegalArgumentException("Could not create an API instance. Was the host set?")
+            val token = config.token ?: throw IllegalArgumentException("Token was not set")
 
             api.triggerService(
                 "homeassistant",
@@ -82,6 +82,7 @@ class ListenerService : NotificationListenerService(), LifecycleOwner {
                 ),
                 "Bearer $token"
             )
+            Log.d("AndroidTvRefresher", "Refresh done")
         } catch (e: Exception) {
             e.printStackTrace()
         }
