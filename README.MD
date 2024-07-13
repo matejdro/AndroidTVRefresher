@@ -18,15 +18,15 @@ When app is active, it turns Android TV integration [from Local Polling to Local
 12. Under `entity_id` select your Android TV device
 13. Under command enter 
 
-    ```am broadcast -a com.matejdro.androidtvrefresher.SET_URL -e data "HASS_HOST" com.matejdro.androidtvrefresher```
+    ```am broadcast -a com.matejdro.androidtvrefresher.SET_URL -e data "HASS_HOST" com.matejdro.androidtvrefresher/com.matejdro.androidtvrefresher.ConfigReceiver```
 
-    but replace `HASS_HOST` with the URL of your home assistant page, including the http(s) (URL must be reachable from Android TV). For example:
+    but replace `HASS_HOST` with the URL of your home assistant page, **including the http(s)** (URL must be reachable from Android TV). For example:
 
     ![](images/example.png)
 14. Press `CALL SERVICE`
 15. Under command enter 
 
-    ```am broadcast -a com.matejdro.androidtvrefresher.SET_TOKEN -e data "TOKEN" com.matejdro.androidtvrefresher```
+    ```am broadcast -a com.matejdro.androidtvrefresher.SET_TOKEN -e data "TOKEN" com.matejdro.androidtvrefresher/com.matejdro.androidtvrefresher.ConfigReceiver```
 
     but replace `TOKEN` with the token that you created in step 8
 14. Press `CALL SERVICE`
