@@ -119,7 +119,7 @@ class ActiveMediaSessionProvider constructor(private val context: Context) :
             }
         }
 
-        override fun onAudioInfoChanged(info: MediaController.PlaybackInfo?) {
+        override fun onAudioInfoChanged(info: MediaController.PlaybackInfo) {
             updateControllerIfNeeded()
         }
     }
