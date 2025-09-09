@@ -9,7 +9,7 @@ android {
     defaultConfig {
         applicationId "com.matejdro.androidtvrefresher"
         minSdkVersion 21
-        compileSdk  35
+        compileSdk  36
         targetSdkVersion 33
         versionCode 1
         versionName "1.0"
@@ -35,13 +35,13 @@ kotlin {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'androidx.core:core-ktx:1.15.0'
-    implementation 'androidx.appcompat:appcompat:1.7.0'
-    implementation 'com.google.android.material:material:1.12.0'
-    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.8.7"
-    implementation "com.squareup.retrofit2:retrofit:2.11.0"
-    implementation "com.squareup.retrofit2:converter-moshi:2.11.0"
+    implementation 'androidx.core:core-ktx:1.17.0'
+    implementation 'androidx.appcompat:appcompat:1.7.1'
+    implementation 'com.google.android.material:material:1.13.0'
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.9.3"
+    implementation "com.squareup.retrofit2:retrofit:3.0.0"
+    implementation "com.squareup.retrofit2:converter-moshi:3.0.0"
     implementation "com.squareup.moshi:moshi:1.15.2"
 
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.1"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.2"
 }

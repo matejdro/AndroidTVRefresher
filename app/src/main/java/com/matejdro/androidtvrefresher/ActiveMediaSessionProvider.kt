@@ -10,7 +10,7 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.create
 
 class ActiveMediaSessionProvider constructor(private val context: Context) :
-        androidx.lifecycle.LiveData<MediaController>(),
+        androidx.lifecycle.LiveData<MediaController?>(),
         MediaSessionManager.OnActiveSessionsChangedListener {
 
     private val mediaSessionManager: MediaSessionManager = context.getSystemService(Context.MEDIA_SESSION_SERVICE) as MediaSessionManager
